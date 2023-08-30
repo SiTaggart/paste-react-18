@@ -4,6 +4,7 @@ import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
 import { Button } from '@twilio-paste/core/button';
 import { DisplayHeading } from '@twilio-paste/core/display-heading';
+import { Checkbox } from '@twilio-paste/core/checkbox';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,14 @@ function App() {
         <DisplayHeading as="h1" variant="displayHeading10">
           Display Heading
         </DisplayHeading>
+        <Checkbox
+          id="checkbox"
+          checked={false}
+          onChange={() => {}}
+          value="Paste"
+        >
+          Enable SSL certificate validation
+        </Checkbox>
       </Box>
     </Theme.Provider>
   );
