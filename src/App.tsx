@@ -7,7 +7,7 @@ import { DisplayHeading } from '@twilio-paste/core/display-heading';
 import { Checkbox } from '@twilio-paste/core/checkbox';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [checked, setChecked] = useState(false);
 
   return (
     <Theme.Provider theme="twilio">
@@ -19,8 +19,10 @@ function App() {
         </DisplayHeading>
         <Checkbox
           id="checkbox"
-          checked={false}
-          onChange={() => {}}
+          checked={checked}
+          onChange={() => {
+            setChecked(!checked);
+          }}
           value="Paste"
         >
           Enable SSL certificate validation
